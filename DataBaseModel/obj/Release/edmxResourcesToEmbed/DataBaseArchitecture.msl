@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_DeviceBorrowingSystemModelStoreContainer" CdmEntityContainer="db_DeviceBorrowingSystemEntities1">
+    <EntitySetMapping Name="tbl_Calibration">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_Calibration">
+        <MappingFragment StoreEntitySet="tbl_Calibration">
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+          <ScalarProperty Name="Device_ID" ColumnName="Device_ID" />
+          <ScalarProperty Name="Calibration_Date" ColumnName="Calibration_Date" />
+          <ScalarProperty Name="Calibration_Cost" ColumnName="Calibration_Cost" />
+          <ScalarProperty Name="Reminding_day" ColumnName="Reminding_day" />
+          <ScalarProperty Name="Calibration_Duration" ColumnName="Calibration_Duration" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_chamber_content">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_chamber_content">
+        <MappingFragment StoreEntitySet="tbl_chamber_content">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="e_id" ColumnName="e_id" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="cc_date" ColumnName="cc_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_chamber_detail">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_chamber_detail">
+        <MappingFragment StoreEntitySet="tbl_chamber_detail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="c_avg_hr" ColumnName="c_avg_hr" />
+          <ScalarProperty Name="c_loan_day" ColumnName="c_loan_day" />
+          <ScalarProperty Name="c_lab_location" ColumnName="c_lab_location" />
+          <ScalarProperty Name="c_date" ColumnName="c_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_device_detail">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_device_detail">
+        <MappingFragment StoreEntitySet="tbl_device_detail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="d_id" ColumnName="d_id" />
+          <ScalarProperty Name="d_customid" ColumnName="d_customid" />
+          <ScalarProperty Name="d_class" ColumnName="d_class" />
+          <ScalarProperty Name="d_interface" ColumnName="d_interface" />
+          <ScalarProperty Name="d_status" ColumnName="d_status" />
+          <ScalarProperty Name="d_date" ColumnName="d_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_equipment_detail">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_equipment_detail">
+        <MappingFragment StoreEntitySet="tbl_equipment_detail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="e_id" ColumnName="e_id" />
+          <ScalarProperty Name="e_testing_time" ColumnName="e_testing_time" />
+          <ScalarProperty Name="e_avg_hr" ColumnName="e_avg_hr" />
+          <ScalarProperty Name="e_loan_day" ColumnName="e_loan_day" />
+          <ScalarProperty Name="e_lab_location" ColumnName="e_lab_location" />
+          <ScalarProperty Name="e_date" ColumnName="e_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FloatingPrice">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_FloatingPrice">
+        <MappingFragment StoreEntitySet="tbl_FloatingPrice">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Device_ID" ColumnName="Device_ID" />
+          <ScalarProperty Name="Inside_cost" ColumnName="Inside_cost" />
+          <ScalarProperty Name="Outside_cost" ColumnName="Outside_cost" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Project">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_Project">
+        <MappingFragment StoreEntitySet="tbl_Project">
+          <ScalarProperty Name="PJ_Code" ColumnName="PJ_Code" />
+          <ScalarProperty Name="PJ_Name" ColumnName="PJ_Name" />
+          <ScalarProperty Name="Cust_Name" ColumnName="Cust_Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ProxyUser">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_ProxyUser">
+        <MappingFragment StoreEntitySet="tbl_ProxyUser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ProxyUID" ColumnName="ProxyUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="CreateDT" ColumnName="CreateDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_summary_dev_title">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_summary_dev_title">
+        <MappingFragment StoreEntitySet="tbl_summary_dev_title">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_ownerid" ColumnName="s_ownerid" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="s_assetid" ColumnName="s_assetid" />
+          <ScalarProperty Name="s_category" ColumnName="s_category" />
+          <ScalarProperty Name="s_vender" ColumnName="s_vender" />
+          <ScalarProperty Name="s_cost" ColumnName="s_cost" />
+          <ScalarProperty Name="s_status" ColumnName="s_status" />
+          <ScalarProperty Name="s_image" ColumnName="s_image" />
+          <ScalarProperty Name="s_image_url" ColumnName="s_image_url" />
+          <ScalarProperty Name="s_note" ColumnName="s_note" />
+          <ScalarProperty Name="s_date" ColumnName="s_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_TestCategory">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_TestCategory">
+        <MappingFragment StoreEntitySet="tbl_TestCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DeviceBooking">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_DeviceBooking">
+        <MappingFragment StoreEntitySet="tbl_DeviceBooking">
+          <ScalarProperty Name="db_end" ColumnName="db_end" />
+          <ScalarProperty Name="db_start" ColumnName="db_start" />
+          <ScalarProperty Name="db_recurrence" ColumnName="db_recurrence" />
+          <ScalarProperty Name="db_is_recurrence" ColumnName="db_is_recurrence" />
+          <ScalarProperty Name="Review_Comment" ColumnName="Review_Comment" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Warn_Date" ColumnName="Warn_Date" />
+          <ScalarProperty Name="Reviewer_ID" ColumnName="Reviewer_ID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Real_ReDateTime" ColumnName="Real_ReDateTime" />
+          <ScalarProperty Name="Plan_To_ReDateTime" ColumnName="Plan_To_ReDateTime" />
+          <ScalarProperty Name="Loan_DateTime" ColumnName="Loan_DateTime" />
+          <ScalarProperty Name="PJ_Stage" ColumnName="PJ_Stage" />
+          <ScalarProperty Name="TestCategory_ID" ColumnName="TestCategory_ID" />
+          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+          <ScalarProperty Name="Device_ID" ColumnName="Device_ID" />
+          <ScalarProperty Name="Loaner_ID" ColumnName="Loaner_ID" />
+          <ScalarProperty Name="Booking_ID" ColumnName="Booking_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_project_stage">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_project_stage">
+        <MappingFragment StoreEntitySet="tbl_project_stage">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="ps_to" ColumnName="ps_to" />
+          <ScalarProperty Name="ps_from" ColumnName="ps_from" />
+          <ScalarProperty Name="ps_stage" ColumnName="ps_stage" />
+          <ScalarProperty Name="ps_pj_id" ColumnName="ps_pj_id" />
+          <ScalarProperty Name="ps_id" ColumnName="ps_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_captcha">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_captcha">
+        <MappingFragment StoreEntitySet="tbl_captcha">
+          <ScalarProperty Name="cp_date" ColumnName="cp_date" />
+          <ScalarProperty Name="cp_check" ColumnName="cp_check" />
+          <ScalarProperty Name="cp_expiration" ColumnName="cp_expiration" />
+          <ScalarProperty Name="cp_ciphertext" ColumnName="cp_ciphertext" />
+          <ScalarProperty Name="cp_cleartext" ColumnName="cp_cleartext" />
+          <ScalarProperty Name="cp_id" ColumnName="cp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Person">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_Person">
+        <MappingFragment StoreEntitySet="tbl_Person">
+          <ScalarProperty Name="P_Activate" ColumnName="P_Activate" />
+          <ScalarProperty Name="P_RegisterStatus" ColumnName="P_RegisterStatus" />
+          <ScalarProperty Name="P_Location" ColumnName="P_Location" />
+          <ScalarProperty Name="P_Date" ColumnName="P_Date" />
+          <ScalarProperty Name="P_Role" ColumnName="P_Role" />
+          <ScalarProperty Name="P_ExNumber" ColumnName="P_ExNumber" />
+          <ScalarProperty Name="P_Email" ColumnName="P_Email" />
+          <ScalarProperty Name="P_ChargeDepartment" ColumnName="P_ChargeDepartment" />
+          <ScalarProperty Name="P_Department" ColumnName="P_Department" />
+          <ScalarProperty Name="P_Password" ColumnName="P_Password" />
+          <ScalarProperty Name="P_Name" ColumnName="P_Name" />
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_new_person">
+      <EntityTypeMapping TypeName="db_DeviceBorrowingSystemModel.tbl_new_person">
+        <MappingFragment StoreEntitySet="tbl_new_person">
+          <ScalarProperty Name="P_Activate" ColumnName="P_Activate" />
+          <ScalarProperty Name="P_RegisterStatus" ColumnName="P_RegisterStatus" />
+          <ScalarProperty Name="P_Location" ColumnName="P_Location" />
+          <ScalarProperty Name="P_Date" ColumnName="P_Date" />
+          <ScalarProperty Name="P_Role" ColumnName="P_Role" />
+          <ScalarProperty Name="P_ExNumber" ColumnName="P_ExNumber" />
+          <ScalarProperty Name="P_Email" ColumnName="P_Email" />
+          <ScalarProperty Name="P_ChargeDepartment" ColumnName="P_ChargeDepartment" />
+          <ScalarProperty Name="P_Department" ColumnName="P_Department" />
+          <ScalarProperty Name="P_Password" ColumnName="P_Password" />
+          <ScalarProperty Name="P_Name" ColumnName="P_Name" />
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

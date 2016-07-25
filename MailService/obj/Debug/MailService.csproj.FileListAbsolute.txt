@@ -1,0 +1,9 @@
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\bin\Debug\MailService.exe.config
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\bin\Debug\MailService.exe
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\bin\Debug\MailService.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.csprojResolveAssemblyReference.cache
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.MailService.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.Properties.Resources.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.csproj.GenerateResource.Cache
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.exe
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\MailService\obj\Debug\MailService.pdb

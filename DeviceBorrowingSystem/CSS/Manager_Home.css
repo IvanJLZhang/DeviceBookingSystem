@@ -1,0 +1,34 @@
+﻿body {
+}
+
+.ApproveOrRejectCommand {
+    position: relative;
+    /*text-align:right;*/
+    width: 900px;
+}
+
+.buttonStyle {
+    position: relative;
+    left: 300px;
+    width: 100px;
+}
+
+
+
+.gridViewStyle {
+}
+
+.gridViewHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.gridViewHeader_visible {
+    width: 0px;
+    border-left: none;
+}
+
+.gridViewCommandButton {
+    width: 50px;
+}

@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager_MasterPage.master.cs" Inherits="Manager_Manager_MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../CSS/MainStyleSheet.css" rel="Stylesheet" />
+    <script type="text/javascript" language="javascript" src="../JS/MainJavaScript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script type="text/javascript">
+        function ShowTimeZone() {
+            var timeZone = GetTimeZone();
+            var clientID = '<%= this.hf_TimeZone.ClientID%>';
+            //this.document.getElementById(clientID).value = timeZone;
+        }
+        window.onload = ShowTimeZone;
+    </script>
+    <form id="form1" runat="server" style="height: 100%" onload="form1_Load">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="div_Top">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <div id="divTitle" style="text-align: center; height: 50px;background-image:url('../Images/12d68ce36c46834c1edf8f930296398a.jpg'); background-position-x:center; background-repeat:no-repeat">
+                        <table width="100%">
+                            <tr>
+                                <td style="width:30%; text-align:left">                                    
+                                    <%--<asp:Timer ID="Timer1" runat="server" Interval="10000000" OnTick="Timer1_Tick"></asp:Timer>--%>
+                                    <asp:Label ID="lbl_Time" runat="server"><%= DateTime.Now.ToString("yyyy-MM-dd HH:mm") %></asp:Label>
+                                    <asp:Label ID="lbl_TimeZone" runat="server"></asp:Label>
+                                    <asp:HiddenField ID="hf_TimeZone" runat="server" /></td>
+                                <td style="width:40%">
+                                    <%--<font style="font-size:x-large; " bold="true">Device Borrowing Maintain System</font>--%>
+                                </td>
+                                <td style="width:30%"><div id="div_UserInfo" align="left" style="float: right">
+                                        <table>
+                                            <tr style="text-align: right">
+                                                <td style="text-align: left">Welcome：<asp:LinkButton ID="lb_UserName" runat="server" OnClick="lb_UserName_Click"></asp:LinkButton>
+                                                </td>
+                                                <td style="text-align: right">[<asp:LinkButton ID="lb_QuitLogin" runat="server" OnClick="lb_QuitLogin_Click">QUIT</asp:LinkButton>]&nbsp;|&nbsp;
+                                                </td>
+                                                <td style="text-align: right">
+                                                    <asp:LinkButton ID="lb_GoToBorrowingPage" runat="server" OnClick="lb_GoToBorrowingPage_Click">Leave to Borrowing page</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </ContentTemplate>
+                <Triggers>
+                    <%--<asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />--%>
+                </Triggers>
+            </asp:UpdatePanel>
+            <div id="divMenu" align="left">
+                <dx:ASPxMenu ID="menu" runat="server" Theme="Moderno">
+                    <ItemStyle Font-Size="Large" Font-Bold="true" />
+                    <Items>
+                        <dx:MenuItem Text="HOME" NavigateUrl="~/Manager/Default.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="MAINTAIN">
+                            <ItemStyle HorizontalAlign="Left" />
+                            <Items>
+                                <dx:MenuItem Text="Device" NavigateUrl="~/Manager/DevManagement.aspx?cat=1">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Equipment" NavigateUrl="~/Manager/DevManagement.aspx?cat=2">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Chamber" NavigateUrl="~/Manager/DevManagement.aspx?cat=3">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="RECORD" NavigateUrl="~/Manager/RecordManagement.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="SETTINGS">
+                            <ItemStyle HorizontalAlign="Left" />
+                            <Items>
+                                <dx:MenuItem Text="Project" NavigateUrl="SystemSettings.aspx?type=1">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Test Category" NavigateUrl="SystemSettings.aspx?type=2">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="User" NavigateUrl="PersonManagement.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="System Settings" NavigateUrl="~/Manager/Setting.aspx" Visible="false">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                    </Items>
+                </dx:ASPxMenu>
+            </div>
+            <%--<hr />--%>
+        </div>
+        <div id="divBodyM" style="vertical-align: top">
+            <table width="100%" style="vertical-align: top; border-bottom: thin solid; border-top: thin solid; border-left: thin solid; border-right: thin solid; border-width: 1px;">
+                <tr>
+                    <td style="width: 80%; border-right: solid">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="width: 20%; vertical-align: top">
+                        <asp:Panel ID="panel_WaitToHandle" runat="server">
+                            <table width="90%" align="center">
+                                <tr>
+                                    <th align="center" style="height: 40px; background-color: lightgrey; font-size: x-large" colspan="2">Notification
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th align="center" style="height: 40px; background-color: lightgrey; font-size: large" colspan="2">Request
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th align="left">Approved--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_approved" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Rejected--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_Rejected" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">New Request--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_newRequest" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="center" style="height: 40px; background-color: lightgrey; font-size: large" colspan="2">Record
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th align="left">All Borrowing Data
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_allRecord" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">overdue borrowing data
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_overdueRecord" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div id="divBottom" align="center">
+            <asp:Label ID="lbl_Bottom" runat="server" ForeColor="GrayText" Text="Copyright@ 2015 Wistron,Inc. All Right Reserved "></asp:Label>
+        </div>
+    </form>
+</body>
+</html>

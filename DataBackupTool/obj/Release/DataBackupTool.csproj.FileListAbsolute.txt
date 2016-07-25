@@ -1,0 +1,14 @@
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.csproj.ResolveComReference.cache
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.MainWindow.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.Properties.Resources.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.csproj.GenerateResource.Cache
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\bin\Release\DataBackupTool.exe.config
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\bin\Release\DataBackupTool.exe.manifest
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\bin\Release\DataBackupTool.application
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\bin\Release\DataBackupTool.exe
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\bin\Release\DataBackupTool.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.exe.manifest
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.application
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.exe
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBackupTool\obj\Release\DataBackupTool.csprojResolveAssemblyReference.cache

@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class", "Class", "{43905299-8EEC-4CD3-B38D-2B5C27D8988F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D3A973B3-6C5E-416B-974F-1DF634639001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{770D1B5C-5936-4DBB-9B30-F591BCB0BD00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBackupTool", "DataBackupTool\DataBackupTool.csproj", "{A10E3874-87E3-4911-8710-69D9AA959373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseModel", "DataBaseModel\DataBaseModel.csproj", "{DB3C0C0F-5417-4796-B3E2-67EDF4444415}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DeviceBorrowingSystem(1)", "http://localhost:12430", "{1BD621FF-5B81-4CB7-BE56-3C45E12AC835}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{db3c0c0f-5417-4796-b3e2-67edf4444415}|DataBaseModel.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/DeviceBorrowingSystem"
+		Debug.AspNetCompiler.PhysicalPath = "DeviceBorrowingSystem\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DeviceBorrowingSystem\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DeviceBorrowingSystem"
+		Release.AspNetCompiler.PhysicalPath = "DeviceBorrowingSystem\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DeviceBorrowingSystem\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "DeviceBorrowingSystem\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailService", "MailService\MailService.csproj", "{8145789E-809C-4A74-983A-896415C94AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADDemo", "ADDemo\ADDemo.csproj", "{9D3F8D96-E667-40FE-8BD2-8649ABA401C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A10E3874-87E3-4911-8710-69D9AA959373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10E3874-87E3-4911-8710-69D9AA959373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10E3874-87E3-4911-8710-69D9AA959373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10E3874-87E3-4911-8710-69D9AA959373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3C0C0F-5417-4796-B3E2-67EDF4444415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3C0C0F-5417-4796-B3E2-67EDF4444415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3C0C0F-5417-4796-B3E2-67EDF4444415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3C0C0F-5417-4796-B3E2-67EDF4444415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD621FF-5B81-4CB7-BE56-3C45E12AC835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD621FF-5B81-4CB7-BE56-3C45E12AC835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD621FF-5B81-4CB7-BE56-3C45E12AC835}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD621FF-5B81-4CB7-BE56-3C45E12AC835}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8145789E-809C-4A74-983A-896415C94AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8145789E-809C-4A74-983A-896415C94AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8145789E-809C-4A74-983A-896415C94AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8145789E-809C-4A74-983A-896415C94AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3F8D96-E667-40FE-8BD2-8649ABA401C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3F8D96-E667-40FE-8BD2-8649ABA401C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3F8D96-E667-40FE-8BD2-8649ABA401C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3F8D96-E667-40FE-8BD2-8649ABA401C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB3C0C0F-5417-4796-B3E2-67EDF4444415} = {43905299-8EEC-4CD3-B38D-2B5C27D8988F}
+		{1BD621FF-5B81-4CB7-BE56-3C45E12AC835} = {D3A973B3-6C5E-416B-974F-1DF634639001}
+		{A10E3874-87E3-4911-8710-69D9AA959373} = {770D1B5C-5936-4DBB-9B30-F591BCB0BD00}
+		{8145789E-809C-4A74-983A-896415C94AAB} = {770D1B5C-5936-4DBB-9B30-F591BCB0BD00}
+		{9D3F8D96-E667-40FE-8BD2-8649ABA401C8} = {770D1B5C-5936-4DBB-9B30-F591BCB0BD00}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

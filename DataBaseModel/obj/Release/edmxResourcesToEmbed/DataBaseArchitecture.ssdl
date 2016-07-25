@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_DeviceBorrowingSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="db_DeviceBorrowingSystemModelStoreContainer">
+    <EntitySet Name="tbl_Calibration" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_Calibration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_captcha" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_captcha" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_chamber_content" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_chamber_content" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_chamber_detail" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_chamber_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_device_detail" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_device_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_DeviceBooking" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_DeviceBooking" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_equipment_detail" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_equipment_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_FloatingPrice" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_FloatingPrice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_new_person" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_new_person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Person" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Project" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_project_stage" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_project_stage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_ProxyUser" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_ProxyUser" store:Type="Tables" store:Schema="dbo" store:Name="tbl_ProxyUser">
+      <DefiningQuery>SELECT 
+      [tbl_ProxyUser].[id] AS [id], 
+      [tbl_ProxyUser].[IsFinished] AS [IsFinished], 
+      [tbl_ProxyUser].[UID] AS [UID], 
+      [tbl_ProxyUser].[ProxyUID] AS [ProxyUID], 
+      [tbl_ProxyUser].[StartDate] AS [StartDate], 
+      [tbl_ProxyUser].[EndDate] AS [EndDate], 
+      [tbl_ProxyUser].[CreateDT] AS [CreateDT]
+      FROM [dbo].[tbl_ProxyUser] AS [tbl_ProxyUser]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_summary_dev_title" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_summary_dev_title" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_TestCategory" EntityType="db_DeviceBorrowingSystemModel.Store.tbl_TestCategory" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbl_Calibration">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Device_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Calibration_Date" Type="datetime" />
+    <Property Name="Calibration_Cost" Type="float" />
+    <Property Name="Reminding_day" Type="int" />
+    <Property Name="Calibration_Duration" Type="int" />
+    <Property Name="Create_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_captcha">
+    <Key>
+      <PropertyRef Name="cp_id" />
+    </Key>
+    <Property Name="cp_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cp_cleartext" Type="varchar" MaxLength="50" />
+    <Property Name="cp_ciphertext" Type="varchar" MaxLength="50" />
+    <Property Name="cp_expiration" Type="datetime" />
+    <Property Name="cp_check" Type="bit" Nullable="false" />
+    <Property Name="cp_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_chamber_content">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="e_id" Type="varchar" MaxLength="50" />
+    <Property Name="c_id" Type="varchar" MaxLength="50" />
+    <Property Name="cc_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_chamber_detail">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="c_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="c_avg_hr" Type="int" />
+    <Property Name="c_loan_day" Type="int" />
+    <Property Name="c_lab_location" Type="varchar" MaxLength="50" />
+    <Property Name="c_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_device_detail">
+    <Key>
+      <PropertyRef Name="d_id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="d_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="d_customid" Type="varchar" MaxLength="50" />
+    <Property Name="d_class" Type="varchar" MaxLength="50" />
+    <Property Name="d_interface" Type="varchar" MaxLength="50" />
+    <Property Name="d_status" Type="int" />
+    <Property Name="d_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_DeviceBooking">
+    <Key>
+      <PropertyRef Name="Booking_ID" />
+    </Key>
+    <Property Name="Booking_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Loaner_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Device_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Project_ID" Type="varchar" MaxLength="50" />
+    <Property Name="TestCategory_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PJ_Stage" Type="varchar" MaxLength="50" />
+    <Property Name="Loan_DateTime" Type="datetime" />
+    <Property Name="Plan_To_ReDateTime" Type="datetime" />
+    <Property Name="Real_ReDateTime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="200" />
+    <Property Name="Reviewer_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Warn_Date" Type="datetime" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Review_Comment" Type="varchar" MaxLength="200" />
+    <Property Name="db_is_recurrence" Type="bit" Nullable="false" />
+    <Property Name="db_recurrence" Type="varchar" MaxLength="200" />
+    <Property Name="db_start" Type="time" Precision="4" />
+    <Property Name="db_end" Type="time" Precision="4" />
+  </EntityType>
+  <EntityType Name="tbl_equipment_detail">
+    <Key>
+      <PropertyRef Name="e_id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="e_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="e_testing_time" Type="time" />
+    <Property Name="e_avg_hr" Type="int" />
+    <Property Name="e_loan_day" Type="int" />
+    <Property Name="e_lab_location" Type="varchar" MaxLength="50" />
+    <Property Name="e_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_FloatingPrice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Device_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Inside_cost" Type="float" />
+    <Property Name="Outside_cost" Type="float" />
+    <Property Name="Note" Type="varchar" MaxLength="200" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_new_person">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="P_Name" Type="varchar" MaxLength="50" />
+    <Property Name="P_Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="P_Department" Type="varchar" MaxLength="50" />
+    <Property Name="P_ChargeDepartment" Type="varchar" MaxLength="200" />
+    <Property Name="P_Email" Type="varchar" MaxLength="50" />
+    <Property Name="P_ExNumber" Type="varchar" MaxLength="50" />
+    <Property Name="P_Role" Type="int" Nullable="false" />
+    <Property Name="P_Date" Type="datetime" />
+    <Property Name="P_Location" Type="varchar" MaxLength="50" />
+    <Property Name="P_RegisterStatus" Type="bit" Nullable="false" />
+    <Property Name="P_Activate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Person">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="P_Name" Type="varchar" MaxLength="50" />
+    <Property Name="P_Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="P_Department" Type="varchar" MaxLength="50" />
+    <Property Name="P_ChargeDepartment" Type="varchar" MaxLength="200" />
+    <Property Name="P_Email" Type="varchar" MaxLength="50" />
+    <Property Name="P_ExNumber" Type="varchar" MaxLength="50" />
+    <Property Name="P_Role" Type="int" Nullable="false" />
+    <Property Name="P_Date" Type="datetime" />
+    <Property Name="P_Location" Type="varchar" MaxLength="50" />
+    <Property Name="P_RegisterStatus" Type="bit" Nullable="false" />
+    <Property Name="P_Activate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Project">
+    <Key>
+      <PropertyRef Name="PJ_Code" />
+    </Key>
+    <Property Name="PJ_Code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PJ_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Cust_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_project_stage">
+    <Key>
+      <PropertyRef Name="ps_id" />
+    </Key>
+    <Property Name="ps_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ps_pj_id" Type="varchar" MaxLength="50" />
+    <Property Name="ps_stage" Type="varchar" MaxLength="50" />
+    <Property Name="ps_from" Type="datetime" />
+    <Property Name="ps_to" Type="datetime" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“db_DeviceBorrowingSystem.dbo.tbl_ProxyUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="tbl_ProxyUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsFinished" Type="bit" />
+    <Property Name="UID" Type="varchar" MaxLength="50" />
+    <Property Name="ProxyUID" Type="varchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="CreateDT" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_summary_dev_title">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="s_ownerid" Type="varchar" MaxLength="50" />
+    <Property Name="s_name" Type="varchar" MaxLength="100" />
+    <Property Name="s_assetid" Type="varchar" MaxLength="50" />
+    <Property Name="s_category" Type="int" />
+    <Property Name="s_vender" Type="varchar" MaxLength="50" />
+    <Property Name="s_cost" Type="float" />
+    <Property Name="s_status" Type="int" />
+    <Property Name="s_image" Type="image" />
+    <Property Name="s_image_url" Type="varchar" MaxLength="200" />
+    <Property Name="s_note" Type="varchar" MaxLength="200" />
+    <Property Name="s_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_TestCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+</Schema>

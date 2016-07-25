@@ -1,0 +1,4 @@
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\ADDemo\obj\Debug\ADDemo.csprojResolveAssemblyReference.cache
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\ADDemo\obj\Debug\ADDemo.Form1.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\ADDemo\obj\Debug\ADDemo.Properties.Resources.resources
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\ADDemo\obj\Debug\ADDemo.csproj.GenerateResource.Cache

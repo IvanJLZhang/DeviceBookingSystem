@@ -1,0 +1,9 @@
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\DataBaseModel.dll.config
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\DataBaseModel.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\DataBaseModel.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\EntityFramework.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\EntityFramework.xml
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\obj\Release\DataBaseModel.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\obj\Release\DataBaseModel.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\obj\Release\DataBaseModel.csprojResolveAssemblyReference.cache

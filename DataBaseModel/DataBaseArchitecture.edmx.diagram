@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb37da0df7004b68962d931374e8f5d9" Name="关系图1" ShowGrid="true">
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_Calibration" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_chamber_content" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_chamber_detail" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_device_detail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_equipment_detail" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_FloatingPrice" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_Project" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_ProxyUser" Width="1.5" PointX="5.125" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_summary_dev_title" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_TestCategory" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_DeviceBooking" Width="1.5" PointX="9.125" PointY="2.875" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_project_stage" Width="1.5" PointX="0.5" PointY="11.5" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_captcha" Width="1.5" PointX="7.125" PointY="7.375" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_Person" Width="1.5" PointX="7.125" PointY="3.625" />
+        <EntityTypeShape EntityType="db_DeviceBorrowingSystemModel.tbl_new_person" Width="1.5" PointX="3" PointY="6.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

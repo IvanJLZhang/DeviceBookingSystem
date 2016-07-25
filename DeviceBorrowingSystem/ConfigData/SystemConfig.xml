@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Test_Category>
+    <TypeID value="201409010000">
+      <TestCategory_Name>validation</TestCategory_Name>
+    </TypeID>
+    <TypeID value="201409010001">
+      <TestCategory_Name>debug</TestCategory_Name>
+    </TypeID>
+    <TypeID value="201409010002">
+      <TestCategory_Name>fully run</TestCategory_Name>
+    </TypeID>
+  </Test_Category>
+</root>

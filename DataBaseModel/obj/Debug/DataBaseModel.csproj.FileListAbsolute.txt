@@ -1,0 +1,8 @@
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\DataBaseModel.dll.config
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\DataBaseModel.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\DataBaseModel.pdb
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\EntityFramework.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\EntityFramework.xml
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\obj\Debug\DataBaseModel.dll
+C:\Users\Ivanjl\Documents\Visual Studio 2012\Projects\DeviceBorrowingSystem\DataBaseModel\obj\Debug\DataBaseModel.pdb

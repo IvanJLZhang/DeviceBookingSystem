@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RootNode>
+  <WarnDays>
+    <Device_WarnDays>1</Device_WarnDays>
+    <Equipment_WarnDays>3</Equipment_WarnDays>
+  </WarnDays>
+  <Lab_Location>
+    <Lab_Name>NULL</Lab_Name>
+    <Lab_Name>汐萬路</Lab_Name>
+    <Lab_Name>B10FB6</Lab_Name>
+    <Lab_Name>B13FB5</Lab_Name>
+    <Lab_Name>B10FB2</Lab_Name>
+  </Lab_Location>
+  <Category>
+    <Cat_Name>Device</Cat_Name>
+    <Cat_Name>Equipment</Cat_Name>
+    <Cat_Name>Chamber</Cat_Name>
+  </Category>
+</RootNode>

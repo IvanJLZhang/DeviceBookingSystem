@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_DeviceBorrowingSystemModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="db_DeviceBorrowingSystemEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Calibration" EntityType="db_DeviceBorrowingSystemModel.tbl_Calibration" />
+    <EntitySet Name="tbl_chamber_content" EntityType="db_DeviceBorrowingSystemModel.tbl_chamber_content" />
+    <EntitySet Name="tbl_chamber_detail" EntityType="db_DeviceBorrowingSystemModel.tbl_chamber_detail" />
+    <EntitySet Name="tbl_device_detail" EntityType="db_DeviceBorrowingSystemModel.tbl_device_detail" />
+    <EntitySet Name="tbl_equipment_detail" EntityType="db_DeviceBorrowingSystemModel.tbl_equipment_detail" />
+    <EntitySet Name="tbl_FloatingPrice" EntityType="db_DeviceBorrowingSystemModel.tbl_FloatingPrice" />
+    <EntitySet Name="tbl_Project" EntityType="db_DeviceBorrowingSystemModel.tbl_Project" />
+    <EntitySet Name="tbl_ProxyUser" EntityType="db_DeviceBorrowingSystemModel.tbl_ProxyUser" />
+    <EntitySet Name="tbl_summary_dev_title" EntityType="db_DeviceBorrowingSystemModel.tbl_summary_dev_title" />
+    <EntitySet Name="tbl_TestCategory" EntityType="db_DeviceBorrowingSystemModel.tbl_TestCategory" />
+    <EntitySet Name="tbl_DeviceBooking" EntityType="db_DeviceBorrowingSystemModel.tbl_DeviceBooking" />
+    <EntitySet Name="tbl_project_stage" EntityType="db_DeviceBorrowingSystemModel.tbl_project_stage" />
+    <EntitySet Name="tbl_captcha" EntityType="db_DeviceBorrowingSystemModel.tbl_captcha" />
+    <EntitySet Name="tbl_Person" EntityType="db_DeviceBorrowingSystemModel.tbl_Person" />
+    <EntitySet Name="tbl_new_person" EntityType="db_DeviceBorrowingSystemModel.tbl_new_person" />
+  </EntityContainer>
+  <EntityType Name="tbl_Calibration">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Device_ID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Calibration_Date" Type="DateTime" Precision="3" />
+    <Property Name="Calibration_Cost" Type="Double" />
+    <Property Name="Reminding_day" Type="Int32" />
+    <Property Name="Calibration_Duration" Type="Int32" />
+    <Property Name="Create_Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_chamber_content">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="e_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="c_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cc_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_chamber_detail">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="c_avg_hr" Type="Int32" />
+    <Property Name="c_loan_day" Type="Int32" />
+    <Property Name="c_lab_location" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="c_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_device_detail">
+    <Key>
+      <PropertyRef Name="d_id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="d_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="d_customid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="d_class" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="d_interface" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="d_status" Type="Int32" />
+    <Property Name="d_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_equipment_detail">
+    <Key>
+      <PropertyRef Name="e_id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="e_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="e_testing_time" Type="Time" Precision="7" />
+    <Property Name="e_avg_hr" Type="Int32" />
+    <Property Name="e_loan_day" Type="Int32" />
+    <Property Name="e_lab_location" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="e_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_FloatingPrice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Device_ID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Inside_cost" Type="Double" />
+    <Property Name="Outside_cost" Type="Double" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Project">
+    <Key>
+      <PropertyRef Name="PJ_Code" />
+    </Key>
+    <Property Name="PJ_Code" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PJ_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Cust_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_ProxyUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsFinished" Type="Boolean" />
+    <Property Name="UID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProxyUID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="CreateDT" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_summary_dev_title">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="s_ownerid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="s_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="s_assetid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="s_category" Type="Int32" />
+    <Property Name="s_vender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="s_cost" Type="Double" />
+    <Property Name="s_status" Type="Int32" />
+    <Property Name="s_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="s_image_url" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="s_note" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="s_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_TestCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_DeviceBooking">
+    <Key>
+      <PropertyRef Name="Booking_ID" />
+    </Key>
+    <Property Type="String" Name="Booking_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Loaner_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Device_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Project_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestCategory_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PJ_Stage" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Loan_DateTime" Precision="3" />
+    <Property Type="DateTime" Name="Plan_To_ReDateTime" Precision="3" />
+    <Property Type="DateTime" Name="Real_ReDateTime" Precision="3" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="String" Name="Comment" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Reviewer_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Warn_Date" Precision="3" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+    <Property Type="String" Name="Review_Comment" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="db_is_recurrence" Nullable="false" />
+    <Property Type="String" Name="db_recurrence" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Time" Name="db_start" Precision="4" />
+    <Property Type="Time" Name="db_end" Precision="4" />
+  </EntityType>
+  <EntityType Name="tbl_project_stage">
+    <Key>
+      <PropertyRef Name="ps_id" />
+    </Key>
+    <Property Type="Int32" Name="ps_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ps_pj_id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ps_stage" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ps_from" Precision="3" />
+    <Property Type="DateTime" Name="ps_to" Precision="3" />
+    <Property Type="DateTime" Name="date" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_captcha">
+    <Key>
+      <PropertyRef Name="cp_id" />
+    </Key>
+    <Property Type="Int64" Name="cp_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="cp_cleartext" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cp_ciphertext" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="cp_expiration" Precision="3" />
+    <Property Type="Boolean" Name="cp_check" Nullable="false" />
+    <Property Type="DateTime" Name="cp_date" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Person">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Type="String" Name="P_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Password" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Type="String" Name="P_Department" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_ChargeDepartment" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_ExNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="P_Role" Nullable="false" />
+    <Property Type="DateTime" Name="P_Date" Precision="3" />
+    <Property Type="String" Name="P_Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="P_RegisterStatus" Nullable="false" />
+    <Property Type="Boolean" Name="P_Activate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_new_person">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Type="String" Name="P_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Department" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_ChargeDepartment" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="P_ExNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="P_Role" Nullable="false" />
+    <Property Type="DateTime" Name="P_Date" Precision="3" />
+    <Property Type="String" Name="P_Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="P_RegisterStatus" Nullable="false" />
+    <Property Type="Boolean" Name="P_Activate" Nullable="false" />
+  </EntityType>
+</Schema>

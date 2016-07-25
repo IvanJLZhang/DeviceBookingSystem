@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User_MasterPage.master.cs" Inherits="User_User_MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../CSS/MainStyleSheet.css" rel="Stylesheet" />
+    <script type="text/javascript" language="javascript" src="../JS/MainJavaScript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+        <script type="text/javascript">
+            function ShowTimeZone() {
+                var timeZone = GetTimeZone();
+                var clientID = '<%= this.hf_TimeZone.ClientID%>';
+            //this.document.getElementById(clientID).value = timeZone;
+        }
+        window.onload = ShowTimeZone;
+    </script>
+    <form id="form1" runat="server" style="height: 100%;" onload="form1_Load">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <div id="divTitle" style="text-align: center; height: 50px;background-image:url('../Images/12d68ce36c46834c1edf8f930296398a.jpg'); background-position-x:center; background-repeat:no-repeat">
+                        <table style="width: 100%;">
+                            <tr style="left: 10px">
+                                <td align="left" style="width: 20%; vertical-align: bottom">
+                                    <%--<asp:Timer ID="Timer1" runat="server" Interval="1" OnTick="Timer1_Tick"></asp:Timer>--%>
+                                    <asp:Label ID="lbl_Time" runat="server"><%= DateTime.Now.ToString("yyyy-MM-dd HH:mm") %></asp:Label>
+                                    <asp:Label ID="lbl_TimeZone" runat="server"></asp:Label>
+                                    <asp:HiddenField ID="hf_TimeZone" runat="server" />
+                                </td>
+                                <td style="width: 80%; text-align: right; vertical-align: bottom">
+                                    <div id="div_UserInfo" align="left" style="float: right">
+                                        <table>
+                                            <tr style="text-align: right">
+                                                <td style="text-align: right"></td>
+                                                <td style="text-align: left">Welcome：<asp:LinkButton ID="lb_UserName" runat="server" OnClick="lb_UserName_Click"></asp:LinkButton>|
+                                                </td>
+                                                <td style="text-align: right">[<asp:LinkButton ID="lb_QuitLogin" runat="server" OnClick="lb_QuitLogin_Click">QUIT</asp:LinkButton>]&nbsp;|&nbsp;
+                                                </td>
+                                                <td style="text-align: right">
+                                                    <asp:LinkButton ID="lb_GoToBorrowingPage" runat="server" OnClick="lb_GoToBorrowingPage_Click">I'm Manager</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </ContentTemplate>
+                <Triggers>
+                    <%--<asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />--%>
+                </Triggers>
+            </asp:UpdatePanel>
+            <div id="divMenu" align="center">
+                <dx:ASPxMenu ID="ASPxMenu1" runat="server" Theme="Moderno">
+                    <ItemStyle Font-Size="Large" Font-Bold="" />
+                    <Items>
+                        <dx:MenuItem Text="BORROW&amp;SEARCH" NavigateUrl="BookingPage.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="RECORD" NavigateUrl="BorrowingRecord.aspx">
+                        </dx:MenuItem>
+                    </Items>
+                </dx:ASPxMenu>
+            </div>
+            <%--<div id="divReinder">
+                <table style="background-color:gray">
+                    <tr style="width:100%; height:30px">
+                        <td style="width:200px; vertical-align:central; text-transform:uppercase">
+                            <h3 style="text-transform:uppercase; width: 170px;">
+                                Notifications:
+                            </h3>
+                        </td>
+                        <td align="left" style="vertical-align:central; width:100%">
+                            <marquee style=" height:20px" direction="up" align="left" scrollamount="15" scrolldelay="500" onmouseover="this.stop()" onmouseout="this.start()">
+                                <asp:DataGrid ID="dg_Remind" runat="server" ShowHeader="false" AutoGenerateColumns="false" GridLines="None" PageSize="100"
+                                DataSourceID="SqlDataSource1" DataKeyField="Booking_ID" OnItemCommand="dg_Remind_ItemCommand">
+                                <Columns>
+                                    <asp:TemplateColumn HeaderText="Note: ">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lbtn_Approve" runat="server" Text='<%# GetStr(DataBinder.Eval(Container.DataItem, "Booking_ID").ToString(), DataBinder.Eval(Container.DataItem, "Device_Name").ToString())%>'
+                                                 CommandName="Approve" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "Booking_ID").ToString() %>'
+                                                 ToolTip='<%# GetToolTipStr(DataBinder.Eval(Container.DataItem, "P_Name").ToString(), DataBinder.Eval(Container.DataItem, "Loan_DateTime").ToString(), DataBinder.Eval(Container.DataItem, "Plan_To_ReDateTime").ToString()) %>'></asp:LinkButton>
+                                            <br />
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:TemplateColumn>
+                                </Columns>
+                            </asp:DataGrid></td>
+                    </tr>
+                </table>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connStr %>" SelectCommand="SELECT tbl_DeviceBooking.Booking_ID, tbl_Device.Device_Name, tbl_Person.P_Name, tbl_DeviceBooking.Loan_DateTime, tbl_DeviceBooking.Plan_To_ReDateTime FROM tbl_DeviceBooking INNER JOIN tbl_Device ON tbl_DeviceBooking.Device_ID = tbl_Device.Device_ID INNER JOIN tbl_Person ON tbl_DeviceBooking.Loaner_ID = tbl_Person.P_ID WHERE (tbl_DeviceBooking.Status = '0') ORDER BY tbl_DeviceBooking.Loan_DateTime DESC"></asp:SqlDataSource>
+            </div>--%>
+        </div>
+        <div id="divBodyM" style="vertical-align: top">
+            <table width="100%" style="vertical-align: top; border-bottom: thin solid; border-top: thin solid; border-left: thin solid; border-right: thin solid; border-width: 1px;">
+                <tr>
+                    <td style="width: 80%; border-right: solid">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="width: 20%; vertical-align: top">
+                        <asp:Panel ID="panel_WaitToHandle" runat="server">
+                            <table width="90%" align="center">
+                                <tr>
+                                    <th align="center" style="height: 40px; background-color: lightgrey; font-size: x-large" colspan="2">Notification
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th align="left">Un-Submit--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_unSubmit" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Un-Approved--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_Unapproved" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Approved--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_approved" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Rejected--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_Rejected" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Sum--
+                                    </th>
+                                    <td>
+                                        <asp:Label ID="lbl_Sum" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <%--                                <tr>
+                                    <th align="left">Approved--
+                                    </th>
+                                    <td></td>
+                                </tr>--%>
+                            </table>
+                        </asp:Panel>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <br />
+        <div id="divBottom" align="center">
+            <asp:Label ID="lbl_Bottom" runat="server" ForeColor="GrayText" Text="Copyright@ 2015 Wistron,Inc. All Right Reserved "></asp:Label>
+        </div>
+
+    </form>
+</body>
+</html>

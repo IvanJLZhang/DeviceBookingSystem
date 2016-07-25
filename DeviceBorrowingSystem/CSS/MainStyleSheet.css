@@ -1,0 +1,47 @@
+﻿
+html {
+    font-family:Calibri;
+    /*background-color:ActiveBorder;*/
+}
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:#ff0;
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
+
+.hideFile {
+display:none;
+}
+
+        .auto-style1 {
+            width: 105px;
+        }
+
+        .auto-style2 {
+            width: 170px;
+        }
+#divAdd table td {
+width:150px;
+}
+#divAdd TextBox {
+width:100px;
+}

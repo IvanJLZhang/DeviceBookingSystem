@@ -1,0 +1,64 @@
+﻿<%@ Application Language="C#" %>
+
+<script runat="server">
+
+    void Application_Start(object sender, EventArgs e) 
+    {
+        // 在应用程序启动时运行的代码
+
+    }
+    
+    void Application_End(object sender, EventArgs e) 
+    {
+        //  在应用程序关闭时运行的代码
+
+    }
+        
+    void Application_Error(object sender, EventArgs e) 
+    { 
+        // 在出现未处理的错误时运行的代码
+
+    }
+
+    void Session_Start(object sender, EventArgs e) 
+    {
+        // 在新会话启动时运行的代码
+
+        //CheckLogin();
+
+    }
+    private bool CheckLogin()
+    {
+        if (Session["UserName"] == null || Session["UserID"] == null)
+        {
+            Session["UserName"] = null;
+            Session["UserID"] = null;
+            Session["PrePage"] = Request.Url.ToString();
+
+            string loginUrl = Server.MapPath("") + "/Default.aspx";
+            Response.Redirect(loginUrl);
+
+            return false;
+        }
+        int role = Int32.Parse(Session["Role"].ToString());
+        // 确定角色访问权限
+        if ((role / 10) <= 0)
+        {// 权限为普通用户
+            Response.Redirect("./Default.aspx");
+            return false;
+        }
+
+        if (Session["Category"] == null)
+            Session["Category"] = 1;
+        return true;
+    }
+    void Session_End(object sender, EventArgs e) 
+    {
+        // 在会话结束时运行的代码。 
+        // 注意: 只有在 Web.config 文件中的 sessionstate 模式设置为
+        // InProc 时，才会引发 Session_End 事件。如果会话模式设置为 StateServer
+        // 或 SQLServer，则不引发该事件。
+
+    }
+       
+</script>

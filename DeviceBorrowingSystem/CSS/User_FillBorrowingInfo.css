@@ -1,0 +1,22 @@
+﻿body {
+}
+TextBox {
+    width:300px;
+}
+.divCommand {
+    height:50px;
+}
+#btn_submit {
+    position: relative;
+    float: left;
+    left: 200px;
+    top:20px;
+}
+
+#btn_cancel {
+    position: relative;
+    float: right;
+    right: 200px;
+    top:20px;
+}
+

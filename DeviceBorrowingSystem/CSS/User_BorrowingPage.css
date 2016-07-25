@@ -1,0 +1,64 @@
+﻿/*@import url(MainStyleSheet.css);*/
+
+body {
+    text-align:center;
+}
+
+TextBox {
+    width: 300px;
+}
+
+.div_command {
+    height: 50px;
+}
+.btn_Submit {
+    position: relative;
+    float: right;
+    right: 300px;
+    top: 10px;
+    width: 100px;
+}
+
+.btn_Cancel {
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 10px;
+    width: 100px;
+}
+
+#div_navigate {
+    text-align:left;
+    height: 50px;
+}
+    #div_navigate span {
+        margin-left:15px;
+    }
+
+#div_filter {
+    height:50px;
+}
+    #div_filter span {
+        position:relative;
+        float:left;
+        margin-left:15px;
+    }
+#div_pickDate {
+    height:50px;
+}
+    #div_pickDate span {
+        margin-right:15px;
+    }
+
+.div_deviceName {
+    text-align:center;
+}
+
+.div_filterOrCommand {
+    float:left;
+}
+.pickTimeList {
+    text-align:left;
+    margin-left:20px;
+}
+
